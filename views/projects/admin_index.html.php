@@ -26,9 +26,9 @@ $dateFormatter = new IntlDateFormatter(
 					<td><?= $t('Modified') ?>
 					<td>
 			</thead>
-			<tbody>
+			<tbody class="use-manual-sorting">
 				<?php foreach ($data as $item): ?>
-				<tr>
+				<tr data-id="<?= $item->id ?>">
 					<td>
 						<?= ($item->is_published ? '✓' : '╳') ?>
 					<td>

@@ -19,7 +19,10 @@ use li3_flash_message\extensions\storage\FlashMessage;
 class ProjectsController extends \lithium\action\Controller {
 
 	public function admin_index() {
-		$data = Projects::find('all', ['with' => 'CoverMedia']);
+		$data = Projects::find('all', [
+			'with' => 'CoverMedia',
+			'order' => ['order' => 'DESC']
+		]);
 		return compact('data');
 	}
 
@@ -103,6 +106,17 @@ class ProjectsController extends \lithium\action\Controller {
 		$item = Projects::find($this->request->id);
 		$item->save(['is_promoted' => false]);
 		FlashMessage::write($t('Successfully unpromoted.'));
+
+		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
+	}
+
+	public function admin_order() {
+		extract(Message::aliases());
+
+		$ids = $this->request->data['ids'];
+
+		Projects::weightSequence($ids);
+		FlashMessage::write($t('Successfully updated order.'));
 
 		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
 	}

@@ -28,7 +28,7 @@ class Projects extends \cms_core\models\Base {
 		]
 	];
 
-	protected $_actsAs = [
+	protected static $_actsAs = [
 		'cms_media\extensions\data\behavior\Coupler' => [
 			'bindings' => [
 				'cover' => [
@@ -47,6 +47,10 @@ class Projects extends \cms_core\models\Base {
 				'urls' => "\n",
 				'parts' => "\n"
 			]
+		],
+		'cms_core\extensions\data\behavior\Sortable' => [
+			'field' => 'order',
+			'cluster' => []
 		]
 	];
 
