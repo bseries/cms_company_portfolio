@@ -13,112 +13,22 @@
 namespace cms_agency_portfolio\controllers;
 
 use cms_agency_portfolio\models\Projects;
-use lithium\g11n\Message;
-use li3_flash_message\extensions\storage\FlashMessage;
 
-class ProjectsController extends \lithium\action\Controller {
+class ProjectsController extends \cms_core\controllers\BaseController {
+
+	use \cms_core\controllers\AdminAddTrait;
+	use \cms_core\controllers\AdminEditTrait;
+	use \cms_core\controllers\AdminDeleteTrait;
+
+	use \cms_core\controllers\AdminOrderTrait;
+	use \cms_core\controllers\AdminPublishTrait;
+	use \cms_core\controllers\AdminPromoteTrait;
 
 	public function admin_index() {
 		$data = Projects::find('all', [
-			'with' => 'CoverMedia',
 			'order' => ['order' => 'DESC']
 		]);
 		return compact('data');
-	}
-
-	public function admin_add() {
-		extract(Message::aliases());
-
-		$item = Projects::create();
-
-		if ($this->request->data) {
-			if ($item->save($this->request->data)) {
-				FlashMessage::write($t('Successfully saved.'));
-				return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-			} else {
-				FlashMessage::write($t('Failed to save.'));
-			}
-		}
-		$this->_render['template'] = 'admin_form';
-		return compact('item');
-	}
-
-	public function admin_edit() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-
-		if ($this->request->data) {
-			if ($item->save($this->request->data)) {
-				FlashMessage::write($t('Successfully saved.'));
-				return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-			} else {
-				FlashMessage::write($t('Failed to save.'));
-			}
-		}
-		$this->_render['template'] = 'admin_form';
-		return compact('item');
-	}
-
-	public function admin_delete() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-		$item->delete();
-		FlashMessage::write($t('Successfully deleted.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-	}
-
-	public function admin_publish() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-		$item->save(['is_published' => true]);
-		FlashMessage::write($t('Successfully published.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-	}
-
-	public function admin_unpublish() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-		$item->save(['is_published' => false]);
-		FlashMessage::write($t('Successfully unpublished.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-	}
-
-	public function admin_promote() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-		$item->save(['is_promoted' => true]);
-		FlashMessage::write($t('Successfully promoted.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-	}
-
-	public function admin_unpromote() {
-		extract(Message::aliases());
-
-		$item = Projects::find($this->request->id);
-		$item->save(['is_promoted' => false]);
-		FlashMessage::write($t('Successfully unpromoted.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
-	}
-
-	public function admin_order() {
-		extract(Message::aliases());
-
-		$ids = $this->request->data['ids'];
-
-		Projects::weightSequence($ids);
-		FlashMessage::write($t('Successfully updated order.'));
-
-		return $this->redirect(['action' => 'index', 'library' => 'cms_agency_portfolio']);
 	}
 }
 
