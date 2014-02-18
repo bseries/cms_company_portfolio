@@ -10,10 +10,6 @@ $dateFormatter = new IntlDateFormatter(
 <article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
 	<h1 class="alpha"><?= $t('Portfolio Projects') ?></h1>
 
-	<nav class="actions">
-		<?= $this->html->link($t('new project'), ['action' => 'add', 'library' => 'cms_agency_portfolio'], ['class' => 'button']) ?>
-	</nav>
-
 	<?php if ($data->count()): ?>
 		<table>
 			<thead>
