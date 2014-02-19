@@ -8,36 +8,34 @@ $dateFormatter = new IntlDateFormatter(
 
 ?>
 <article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
-	<h1 class="alpha"><?= $t('Portfolio Projects') ?></h1>
+	<h1 class="alpha"><?= $this->title($t('Portfolio Projects')) ?></h1>
 
 	<?php if ($data->count()): ?>
 		<table>
 			<thead>
 				<tr>
-					<td><?= $t('publ.?') ?>
-					<td><?= $t('prom.?') ?>
+					<td class="flag"><?= $t('publ.?') ?>
+					<td class="flag"><?= $t('prom.?') ?>
 					<td>
-					<td><?= $t('Title') ?>
-					<td><?= $t('Created') ?>
-					<td><?= $t('Modified') ?>
+					<td class="emphasize"><?= $t('Title') ?>
+					<td class="date created"><?= $t('Created') ?>
+					<td class="date modified"><?= $t('Modified') ?>
 					<td>
 			</thead>
 			<tbody class="use-manual-sorting">
 				<?php foreach ($data as $item): ?>
 				<tr data-id="<?= $item->id ?>">
-					<td>
-						<?= ($item->is_published ? '✓' : '╳') ?>
-					<td>
-						<?= ($item->is_promoted ? '✓' : '╳') ?>
+					<td class="flag"><?= ($item->is_published ? '✓' : '╳') ?>
+					<td class="flag"><?= ($item->is_promoted ? '✓' : '╳') ?>
 					<td>
 						<?php if (($media = $item->cover()) && ($version = $media->version('fix3'))): ?>
 							<?= $this->media->image($version->url('http'), ['class' => 'media']) ?>
 						<?php endif ?>
-					<td><?= $item->title ?>
-					<td>
+					<td class="emphasize"><?= $item->title ?>
+					<td class="date created">
 						<?php $date = DateTime::createFromFormat('Y-m-d H:i:s', $item->created) ?>
 						<time datetime="<?= $date->format(DateTime::W3C) ?>"><?= $dateFormatter->format($date) ?></time>
-					<td>
+					<td class="date modified">
 						<?php $date = DateTime::createFromFormat('Y-m-d H:i:s', $item->modified) ?>
 						<time datetime="<?= $date->format(DateTime::W3C) ?>"><?= $dateFormatter->format($date) ?></time>
 					<td>

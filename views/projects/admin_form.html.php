@@ -1,5 +1,18 @@
+<?php
+
+$title = [
+	'action' => ucfirst($this->_request->action === 'add' ? $t('creating') : $t('editing')),
+	'title' => $item->title ?: $t('untitled'),
+	'object' => [ucfirst($t('portfolio project')), ucfirst($t('portfolio projects'))]
+];
+$this->title("{$title['title']} - {$title['object'][1]}");
+
+?>
 <article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
-	<h1 class="alpha"><?= $this->title($t('Portfolio Project')) ?></h1>
+	<h1 class="alpha">
+		<span class="action"><?= $title['action'] ?></span>
+		<span class="title"><?= $title['title'] ?></span>
+	</h1>
 
 	<?=$this->form->create($item) ?>
 		<?= $this->form->field('title', ['type' => 'text', 'label' => $t('Title')]) ?>
@@ -40,7 +53,7 @@
 		<?= $this->form->field('teaser', [
 			'type' => 'textarea',
 			'label' => $t('Short Description'),
-			'wrap' => ['class' => 'teaser use-editor editor-basic'],
+			'wrap' => ['class' => 'teaser use-editor editor-basic editor-link'],
 		]) ?>
 		<?= $this->form->field('body', [
 			'type' => 'textarea',
