@@ -16,15 +16,12 @@ use cms_media\models\Media;
 
 extract(Message::aliases());
 
-Panes::register('cms_agency_portfolio', 'projects', [
-	'title' => $t('Portfolio Projects'),
-	'group' => Panes::GROUP_AUTHORING,
-	'url' => $base = ['controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true],
-	'actions' => [
-		$t('List Projects') => ['action' => 'index'] + $base,
-		$t('New Project') => ['action' => 'add'] + $base
-	]
+$base = ['controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true];
+Panes::registerActions('cms_agency_portfolio', 'authoring', [
+	$t('List Projects') => ['action' => 'index'] + $base,
+	$t('New Project') => ['action' => 'add'] + $base
 ]);
+
 Media::registerDependent('cms_agency_portfolio\models\Projects', [
 	'cover' => 'direct', 'media' => 'joined'
 ]);
