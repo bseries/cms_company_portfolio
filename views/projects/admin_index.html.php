@@ -9,8 +9,6 @@ $this->set([
 
 ?>
 <article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
-	<h1 class="alpha"><?= $this->title($t('Portfolio Projects')) ?></h1>
-
 	<?php if ($data->count()): ?>
 		<table>
 			<thead>
