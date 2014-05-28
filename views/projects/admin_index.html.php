@@ -26,7 +26,7 @@ $this->set([
 					<td class="flag"><?= ($item->is_published ? '✓' : '×') ?>
 					<td class="flag"><?= ($item->is_promoted ? '✓' : '×') ?>
 					<td>
-						<?php if (($media = $item->cover()) && ($version = $media->version('fix3'))): ?>
+						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
 							<?= $this->media->image($version->url('http'), ['class' => 'media']) ?>
 						<?php endif ?>
 					<td class="emphasize"><?= $item->title ?>
