@@ -10,9 +10,15 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-// require 'settings.php';
-require 'media.php';
-require 'panes.php';
-require 'widgets.php';
+use cms_core\extensions\cms\Panes;
+use lithium\g11n\Message;
+
+extract(Message::aliases());
+
+$base = ['controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true];
+Panes::registerActions('cms_agency_portfolio', 'authoring', [
+	$t('List Projects') => ['action' => 'index'] + $base,
+	$t('New Project') => ['action' => 'add'] + $base
+]);
 
 ?>

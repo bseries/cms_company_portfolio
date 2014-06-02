@@ -10,9 +10,10 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-// require 'settings.php';
-require 'media.php';
-require 'panes.php';
-require 'widgets.php';
+use cms_media\models\Media;
+
+Media::registerDependent('cms_agency_portfolio\models\Projects', [
+	'cover' => 'direct', 'media' => 'joined'
+]);
 
 ?>

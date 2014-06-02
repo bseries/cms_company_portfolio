@@ -10,9 +10,22 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-// require 'settings.php';
-require 'media.php';
-require 'panes.php';
-require 'widgets.php';
+use lithium\g11n\Message;
+use cms_core\extensions\cms\Widgets;
+use cms_agency_portfolio\models\Projects;
+
+extract(Message::aliases());
+
+Widgets::register('cms_agency_portfolio', 'authoring',  function() use ($t) {
+	return [
+		'data' => [
+			$t('Projects') => Projects::find('count')
+		]
+	];
+}, [
+	'type' => Widgets::TYPE_TABLE,
+	'group' => Widgets::GROUP_DASHBOARD
+]);
+
 
 ?>
