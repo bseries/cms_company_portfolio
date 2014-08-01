@@ -15,10 +15,9 @@ use lithium\g11n\Message;
 
 extract(Message::aliases());
 
-$base = ['controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true];
-Panes::registerActions('cms_agency_portfolio', 'authoring', [
-	$t('List Projects') => ['action' => 'index'] + $base,
-	$t('New Project') => ['action' => 'add'] + $base
+Panes::register('authoring.projects', [
+	'title' => $t('Projects'),
+	'url' => ['controller' => 'projects', 'action' => 'index', 'library' => 'cms_agency_portfolio', 'admin' => true],
 ]);
 
 ?>

@@ -9,6 +9,11 @@ $this->set([
 
 ?>
 <article class="view-<?= $this->_config['controller'] . '-' . $this->_config['template'] ?>">
+
+	<div class="top-actions">
+		<?= $this->html->link($t('new project'), ['action' => 'add', 'library' => 'cms_agency_portfolio'], ['class' => 'button add']) ?>
+	</div>
+
 	<?php if ($data->count()): ?>
 		<table>
 			<thead>
