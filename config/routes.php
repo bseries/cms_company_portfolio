@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -15,13 +15,13 @@ use lithium\net\http\Router;
 $persist = ['persist' => ['admin', 'controller']];
 
 Router::connect('/admin/portfolio/projects/{:id:[0-9]+}', array(
-	'controller' => 'projects', 'library' => 'cms_agency_portfolio', 'action' => 'view', 'admin' => true
+	'controller' => 'projects', 'library' => 'cms_company_portfolio', 'action' => 'view', 'admin' => true
 ), $persist);
 Router::connect('/admin/portfolio/projects/{:action}', array(
-	'controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true
+	'controller' => 'projects', 'library' => 'cms_company_portfolio', 'admin' => true
 ), $persist);
 Router::connect('/admin/portfolio/projects/{:action}/{:id:[0-9]+}', array(
-	'controller' => 'projects', 'library' => 'cms_agency_portfolio', 'admin' => true
+	'controller' => 'projects', 'library' => 'cms_company_portfolio', 'admin' => true
 ), $persist);
 
 ?>

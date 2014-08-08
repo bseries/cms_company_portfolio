@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -10,7 +10,7 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-namespace cms_agency_portfolio\models;
+namespace cms_company_portfolio\models;
 
 use lithium\util\Validator;
 use DateTime;

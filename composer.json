@@ -1,6 +1,6 @@
 {
-    "name": "atelierdisko/cms_agency_portfolio",
-    "description": "Agency portfolio module for bureau.",
+    "name": "atelierdisko/cms_company_portfolio",
+    "description": "Company portfolio module for bureau.",
     "homepage": "http://atelierdisko.de",
     "type": "lithium-library",
     "license": "proprietary",

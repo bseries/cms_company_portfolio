@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -10,9 +10,9 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-namespace cms_agency_portfolio\controllers;
+namespace cms_company_portfolio\controllers;
 
-use cms_agency_portfolio\models\Projects;
+use cms_company_portfolio\models\Projects;
 
 class ProjectsController extends \cms_core\controllers\BaseController {
 

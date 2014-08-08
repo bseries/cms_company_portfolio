@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -12,7 +12,7 @@
 
 use cms_media\models\Media;
 
-Media::registerDependent('cms_agency_portfolio\models\Projects', [
+Media::registerDependent('cms_company_portfolio\models\Projects', [
 	'cover' => 'direct', 'media' => 'joined'
 ]);
 

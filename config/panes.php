@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -17,7 +17,7 @@ extract(Message::aliases());
 
 Panes::register('authoring.projects', [
 	'title' => $t('Projects'),
-	'url' => ['controller' => 'projects', 'action' => 'index', 'library' => 'cms_agency_portfolio', 'admin' => true],
+	'url' => ['controller' => 'projects', 'action' => 'index', 'library' => 'cms_company_portfolio', 'admin' => true],
 ]);
 
 ?>

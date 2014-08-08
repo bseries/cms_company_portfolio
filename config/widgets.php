@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Agency Portfolio
+ * Bureau Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -12,11 +12,11 @@
 
 use lithium\g11n\Message;
 use cms_core\extensions\cms\Widgets;
-use cms_agency_portfolio\models\Projects;
+use cms_company_portfolio\models\Projects;
 
 extract(Message::aliases());
 
-Widgets::register('cms_agency_portfolio', 'authoring',  function() use ($t) {
+Widgets::register('cms_company_portfolio', 'authoring',  function() use ($t) {
 	return [
 		'data' => [
 			$t('Projects') => Projects::find('count')
