@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Company Portfolio
+ * CMS Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -11,7 +11,7 @@
  */
 
 use lithium\g11n\Message;
-use cms_core\extensions\cms\Widgets;
+use base_core\extensions\cms\Widgets;
 use cms_company_portfolio\models\Projects;
 
 extract(Message::aliases());

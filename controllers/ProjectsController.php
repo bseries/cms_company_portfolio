@@ -1,6 +1,6 @@
 <?php
 /**
- * Bureau Company Portfolio
+ * CMS Company Portfolio
  *
  * Copyright (c) 2014 Atelier Disko - All rights reserved.
  *
@@ -14,15 +14,15 @@ namespace cms_company_portfolio\controllers;
 
 use cms_company_portfolio\models\Projects;
 
-class ProjectsController extends \cms_core\controllers\BaseController {
+class ProjectsController extends \base_core\controllers\BaseController {
 
-	use \cms_core\controllers\AdminAddTrait;
-	use \cms_core\controllers\AdminEditTrait;
-	use \cms_core\controllers\AdminDeleteTrait;
+	use \base_core\controllers\AdminAddTrait;
+	use \base_core\controllers\AdminEditTrait;
+	use \base_core\controllers\AdminDeleteTrait;
 
-	use \cms_core\controllers\AdminOrderTrait;
-	use \cms_core\controllers\AdminPublishTrait;
-	use \cms_core\controllers\AdminPromoteTrait;
+	use \base_core\controllers\AdminOrderTrait;
+	use \base_core\controllers\AdminPublishTrait;
+	use \base_core\controllers\AdminPromoteTrait;
 
 	public function admin_index() {
 		$data = Projects::find('all', [
