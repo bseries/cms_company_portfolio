@@ -17,9 +17,9 @@ use DateTime;
 
 class Projects extends \base_core\models\Base {
 
-	protected $_meta = array(
+	protected $_meta = [
 		'source' => 'portfolio_projects'
-	);
+	];
 
 	public $belongsTo = [
 		'CoverMedia' => [
