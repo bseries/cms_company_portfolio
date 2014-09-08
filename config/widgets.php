@@ -16,7 +16,7 @@ use cms_company_portfolio\models\Projects;
 
 extract(Message::aliases());
 
-Widgets::register('cms_company_portfolio', 'authoring',  function() use ($t) {
+Widgets::register('authoring',  function() use ($t) {
 	return [
 		'data' => [
 			$t('Projects') => Projects::find('count')
