@@ -30,9 +30,9 @@ $this->set([
 				<tr data-id="<?= $item->id ?>">
 					<td class="flag"><?= ($item->is_published ? '✓' : '×') ?>
 					<td class="flag"><?= ($item->is_promoted ? '✓' : '×') ?>
-					<td>
+					<td class="media">
 						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
-							<?= $this->media->image($version->url('http'), ['class' => 'media']) ?>
+							<?= $this->media->image($version->url('http')) ?>
 						<?php endif ?>
 					<td class="emphasize"><?= $item->title ?>
 					<td class="date created">
