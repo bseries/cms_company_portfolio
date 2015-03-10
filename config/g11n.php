@@ -10,14 +10,13 @@
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  */
 
-use base_core\extensions\cms\Panes;
-use lithium\g11n\Message;
+use lithium\g11n\Catalog;
 
-extract(Message::aliases());
-
-Panes::register('authoring.projects', [
-	'title' => $t('Projects', ['scope' => 'cms_company_portfolio']),
-	'url' => ['controller' => 'projects', 'action' => 'index', 'library' => 'cms_company_portfolio', 'admin' => true],
-]);
+Catalog::config([
+	basename(dirname(__DIR__)) => [
+		'adapter' => 'Gettext',
+		'path' => dirname(__DIR__) . '/resources/g11n/po'
+	 ]
+] + Catalog::config());
 
 ?>

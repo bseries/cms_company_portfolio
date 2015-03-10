@@ -19,7 +19,7 @@ extract(Message::aliases());
 Widgets::register('authoring',  function() use ($t) {
 	return [
 		'data' => [
-			$t('Projects') => Projects::find('count')
+			$t('Projects', ['scope' => 'cms_company_portfolio']) => Projects::find('count')
 		]
 	];
 }, [
