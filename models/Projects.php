@@ -51,6 +51,12 @@ class Projects extends \base_core\models\Base {
 		'base_core\extensions\data\behavior\Sortable' => [
 			'field' => 'order',
 			'cluster' => []
+		],
+		'base_core\extensions\data\behavior\Searchable' => [
+			'fields' => [
+				'title',
+				'client'
+			]
 		]
 	];
 
