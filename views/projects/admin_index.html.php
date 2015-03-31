@@ -23,7 +23,7 @@ $this->set([
 					<td>
 					<td class="emphasize"><?= $t('Title') ?>
 					<td class="date created"><?= $t('Created') ?>
-					<td>
+					<td class="actions">
 			</thead>
 			<tbody class="use-manual-sorting">
 				<?php foreach ($data as $item): ?>
