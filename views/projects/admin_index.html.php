@@ -20,8 +20,8 @@ $this->set([
 				<tr>
 					<td class="flag"><?= $t('publ.?') ?>
 					<td class="flag"><?= $t('prom.?') ?>
-					<td>
-					<td class="emphasize"><?= $t('Title') ?>
+					<td class="media">
+					<td class="title emphasize"><?= $t('Title') ?>
 					<td class="date created"><?= $t('Created') ?>
 					<td class="actions">
 			</thead>
@@ -34,7 +34,7 @@ $this->set([
 						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
 							<?= $this->media->image($version->url('http')) ?>
 						<?php endif ?>
-					<td class="emphasize"><?= $item->title ?>
+					<td class="title emphasize"><?= $item->title ?>
 					<td class="date created">
 						<time datetime="<?= $this->date->format($item->created, 'w3c') ?>">
 							<?= $this->date->format($item->created, 'date') ?>
