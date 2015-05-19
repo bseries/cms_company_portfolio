@@ -12,7 +12,6 @@
 
 namespace cms_company_portfolio\models;
 
-use lithium\util\Validator;
 use DateTime;
 
 class Projects extends \base_core\models\Base {
@@ -55,7 +54,8 @@ class Projects extends \base_core\models\Base {
 		'base_core\extensions\data\behavior\Searchable' => [
 			'fields' => [
 				'title',
-				'client'
+				'client',
+				'published'
 			]
 		]
 	];
