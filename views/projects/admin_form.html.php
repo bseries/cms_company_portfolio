@@ -61,24 +61,22 @@ $this->set([
 		</div>
 		<div class="grid-row">
 			<div class="grid-column-left">
-				<?= $this->form->field('teaser', [
-					'type' => 'textarea',
-					'label' => $t('Short Description'),
-					'wrap' => ['class' => 'teaser use-editor editor-basic editor-link'],
+				<?= $this->editor->field('teaser', [
+					'label' => $t('Teaser'),
+					'size' => 'gamma',
+					'features' => 'minimal'
 				]) ?>
 			</div>
-			<div class="grid-column-right">
-			</div>
+			<div class="grid-column-right"></div>
 		</div>
 
 		<div class="grid-row grid-row-last">
-			<?= $this->form->field('body', [
-				'type' => 'textarea',
-				'label' => $t('Long Description'),
-				'wrap' => ['class' => 'body use-editor editor-basic editor-headline editor-size editor-line editor-link editor-list editor-page-break']
+			<?= $this->editor->field('body', [
+				'label' => $t('Content'),
+				'size' => 'beta',
+				'features' => 'full'
 			]) ?>
 		</div>
-
 
 		<div class="bottom-actions">
 			<?php if ($item->exists()): ?>
