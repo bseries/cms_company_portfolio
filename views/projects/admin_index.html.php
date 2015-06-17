@@ -27,7 +27,7 @@ $this->set([
 			<tbody class="use-manual-sorting">
 				<?php foreach ($data as $item): ?>
 				<tr data-id="<?= $item->id ?>">
-					<td class="flag"><?= ($item->is_published ? '✓' : '×') ?>
+					<td class="flag"><i class="material-icons"><?= ($item->is_published ? 'done' : '') ?></i>
 					<td class="flag"><?= ($item->is_promoted ? '✓' : '×') ?>
 					<td class="media">
 						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
