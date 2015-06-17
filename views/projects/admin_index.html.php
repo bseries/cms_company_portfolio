@@ -10,7 +10,7 @@ $this->set([
 ?>
 <article>
 	<div class="top-actions">
-		<?= $this->html->link($t('new project'), ['action' => 'add'], ['class' => 'button add']) ?>
+		<?= $this->html->link($t('project'), ['action' => 'add'], ['class' => 'button add']) ?>
 	</div>
 
 	<?php if ($data->count()): ?>
