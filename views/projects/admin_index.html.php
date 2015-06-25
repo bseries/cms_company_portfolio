@@ -1,5 +1,9 @@
 <?php
 
+$t = function($message, array $options = []) {
+	return Message::translate($message, $options + ['scope' => 'cms_company_portfolio', 'default' => $message]);
+};
+
 $this->set([
 	'page' => [
 		'type' => 'multiple',
@@ -21,7 +25,7 @@ $this->set([
 					<td class="flag"><?= $t('prom.?') ?>
 					<td class="media">
 					<td class="title emphasize"><?= $t('Title') ?>
-					<td class="date created"><?= $t('Created') ?>
+					<td class="date modified"><?= $t('Modified') ?>
 					<td class="actions">
 			</thead>
 			<tbody class="use-manual-sorting">
@@ -34,9 +38,9 @@ $this->set([
 							<?= $this->media->image($version->url('http')) ?>
 						<?php endif ?>
 					<td class="title emphasize"><?= $item->title ?>
-					<td class="date created">
-						<time datetime="<?= $this->date->format($item->created, 'w3c') ?>">
-							<?= $this->date->format($item->created, 'date') ?>
+					<td class="date modified">
+						<time datetime="<?= $this->date->format($item->modified, 'w3c') ?>">
+							<?= $this->date->format($item->modified, 'date') ?>
 						</time>
 					<td class="actions">
 						<?= $this->html->link($t('delete'), ['id' => $item->id, 'action' => 'delete', 'library' => 'cms_company_portfolio'], ['class' => 'button delete']) ?>
