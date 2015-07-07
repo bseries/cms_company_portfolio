@@ -1,5 +1,7 @@
 <?php
 
+use lithium\g11n\Message;
+
 $t = function($message, array $options = []) {
 	return Message::translate($message, $options + ['scope' => 'cms_company_portfolio', 'default' => $message]);
 };
