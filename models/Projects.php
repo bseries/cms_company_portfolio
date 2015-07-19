@@ -27,7 +27,7 @@ class Projects extends \base_core\models\Base {
 		]
 	];
 
-	public $actsAs = [
+	protected $_actsAs = [
 		'base_media\extensions\data\behavior\Coupler' => [
 			'bindings' => [
 				'cover' => [
