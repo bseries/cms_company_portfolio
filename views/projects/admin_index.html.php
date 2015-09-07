@@ -45,7 +45,6 @@ $this->set([
 							<?= $this->date->format($item->modified, 'date') ?>
 						</time>
 					<td class="actions">
-						<?= $this->html->link($t('delete'), ['id' => $item->id, 'action' => 'delete', 'library' => 'cms_company_portfolio'], ['class' => 'button delete']) ?>
 						<?= $this->html->link($item->is_promoted ? $t('unpromote') : $t('promote'), ['id' => $item->id, 'action' => $item->is_promoted ? 'unpromote': 'promote'], ['class' => 'button']) ?>
 						<?= $this->html->link($item->is_published ? $t('unpublish') : $t('publish'), ['id' => $item->id, 'action' => $item->is_published ? 'unpublish': 'publish'], ['class' => 'button']) ?>
 						<?= $this->html->link($t('open'), ['id' => $item->id, 'action' => 'edit', 'library' => 'cms_company_portfolio'], ['class' => 'button']) ?>
