@@ -46,11 +46,6 @@ class Projects extends \base_core\models\Base {
 			]
 		],
 		'base_core\extensions\data\behavior\Timestamp',
-		'base_core\extensions\data\behavior\Serializable' => [
-			'fields' => [
-				'parts' => "\n"
-			]
-		],
 		'base_core\extensions\data\behavior\Sortable' => [
 			'field' => 'order',
 			'cluster' => []

@@ -12,3 +12,4 @@
 
 ### Backwards Incompatible Changes
 
+- `urls` is now a single `url`
