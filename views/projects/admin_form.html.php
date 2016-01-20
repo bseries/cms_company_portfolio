@@ -35,10 +35,9 @@ $this->set([
 		</div>
 		<div class="grid-row">
 			<div class="grid-column-left">
-				<?= $this->form->field('urls', ['type' => 'textarea', 'value' => $item->urls(), 'label' => $t('Links')]) ?>
+				<?= $this->form->field('url', ['type' => 'url', 'label' => $t('Link')]) ?>
 				<div class="help">
-					<?= $t('Specify Links as URLs with leading protocol (i.e. `http://example.com`).') ?>
-					<?= $t('Separate multiple links with newlines so that each one has its own line.') ?>
+					<?= $t('Specify Link as URL with leading protocol (i.e. `http://example.com`).') ?>
 				</div>
 			</div>
 			<div class="grid-column-right">
