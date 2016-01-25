@@ -45,6 +45,7 @@ class Projects extends \base_core\models\Base {
 				]
 			]
 		],
+		'base_core\extensions\data\behavior\Sluggable',
 		'base_core\extensions\data\behavior\Timestamp',
 		'base_core\extensions\data\behavior\Sortable' => [
 			'field' => 'order',
