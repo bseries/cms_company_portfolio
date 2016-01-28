@@ -14,6 +14,7 @@
         "php": ">=5.5.0",
         "atelierdisko/base_core": "1.4.*",
         "atelierdisko/base_media": "1.4.*",
+        "atelierdisko/base_tag": "1.4.*",
         "atelierdisko/cms_core": "1.4.*",
         "unionofrad/lithium": "1.0.*@dev",
         "composer/installers": "1.*@stable"
@@ -21,6 +22,7 @@
     "repositories": [
       { "type": "vcs", "url": "git@code.atelierdisko.de:base_core" },
       { "type": "vcs", "url": "git@code.atelierdisko.de:base_media" },
+      { "type": "vcs", "url": "git@code.atelierdisko.de:base_tag" },
       { "type": "vcs", "url": "git@code.atelierdisko.de:cms_core" }
     ]
 }

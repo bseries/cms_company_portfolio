@@ -41,6 +41,12 @@ $this->set([
 				</div>
 			</div>
 			<div class="grid-column-right">
+				<?= $this->form->field('tags', [
+					'value' => $item->tags(),
+					'label' => $t('Tags'),
+					'placeholder' => 'foo, bar',
+					'class' => 'input--tags'
+				]) ?>
 			</div>
 		</div>
 		<div class="grid-row">
