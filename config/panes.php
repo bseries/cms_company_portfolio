@@ -22,7 +22,7 @@ use lithium\g11n\Message;
 
 extract(Message::aliases());
 
-Panes::register('authoring.projects', [
+Panes::register('cms.projects', [
 	'title' => $t('Projects', ['scope' => 'cms_company_portfolio']),
 	'url' => ['controller' => 'projects', 'action' => 'index', 'library' => 'cms_company_portfolio', 'admin' => true],
 ]);
