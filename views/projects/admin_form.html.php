@@ -21,7 +21,6 @@ $this->set([
 
 ?>
 <article>
-
 	<?=$this->form->create($item) ?>
 		<div class="grid-row">
 			<div class="grid-column-left">
@@ -30,23 +29,31 @@ $this->set([
 			<div class="grid-column-right">
 				<?= $this->form->field('published', ['type' => 'date', 'label' => $t('Release Date')]) ?>
 				<div class="help"><?= $t('Allows you to specify when the project was officially released.') ?></div>
-				<?= $this->form->field('client', ['type' => 'text', 'label' => $t('Client')]) ?>
-			</div>
-		</div>
-		<div class="grid-row">
-			<div class="grid-column-left">
-				<?= $this->form->field('url', ['type' => 'url', 'label' => $t('Link')]) ?>
-				<div class="help">
-					<?= $t('Specify Link as URL with leading protocol (i.e. `http://example.com`).') ?>
-				</div>
-			</div>
-			<div class="grid-column-right">
 				<?= $this->form->field('tags', [
 					'value' => $item->tags(),
 					'label' => $t('Tags'),
 					'placeholder' => 'foo, bar',
 					'class' => 'input--tags'
 				]) ?>
+				<?= $this->form->field('client', ['type' => 'text', 'label' => $t('Client')]) ?>
+				<?= $this->form->field('url', ['type' => 'url', 'label' => $t('Link')]) ?>
+				<div class="help">
+					<?= $t('Specify Link as URL with leading protocol (i.e. `http://example.com`).') ?>
+				</div>
+			</div>
+		</div>
+		<div class="grid-row">
+			<div class="grid-column-left">
+			</div>
+			<div class="grid-column-right">
+				<?= $this->form->field('tasks', [
+					'label' => $t('Tasks'),
+					'value' => $item->tasks(),
+					'type' => 'textarea'
+				]) ?>
+				<div class="help">
+					<?= $t('Tasks for the project (i.e. `art direction`), one per line.') ?>
+				</div>
 			</div>
 		</div>
 		<div class="grid-row">
