@@ -19,6 +19,9 @@
         "unionofrad/lithium": "1.0.*@dev",
         "composer/installers": "1.*@stable"
     },
+    "conflict": {
+        "atelierdisko/cms_artist_portfolio": "*"
+    },
     "repositories": [
       { "type": "vcs", "url": "git@code.atelierdisko.de:base_core" },
       { "type": "vcs", "url": "git@code.atelierdisko.de:base_media" },
