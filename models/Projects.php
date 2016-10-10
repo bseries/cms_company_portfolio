@@ -18,6 +18,7 @@
 namespace cms_company_portfolio\models;
 
 use DateTime;
+use lithium\g11n\Message;
 
 class Projects extends \base_core\models\Base {
 
@@ -75,6 +76,7 @@ class Projects extends \base_core\models\Base {
 	];
 
 	public static function init() {
+		extract(Message::aliases());
 		$model = static::_object();
 
 		$model->validates['title'] = [
@@ -84,6 +86,14 @@ class Projects extends \base_core\models\Base {
 				'message' => 'Dieses Feld darf nicht leer sein.'
 			]
 		];
+		$model->validates['tags'] = [
+			[
+				'noSpacesInTags',
+				'on' => ['create', 'update'],
+				'message' => $t('Tags cannot contain spaces.', ['scope' => 'cms_company_portfolio'])
+			]
+		];
+
 	}
 
 	public function date($entity) {
