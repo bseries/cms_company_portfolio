@@ -7,147 +7,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cms_company_portfolio 1.0\n"
 "Report-Msgid-Bugs-To: info@atelierdisko.de\n"
-"POT-Creation-Date: 2015-03-10 18:10+0100\n"
-"PO-Revision-Date: 2015-03-10 18:10+0100\n"
-"Last-Translator: Automatically generated\n"
+"POT-Creation-Date: 2016-10-18 10:50+0200\n"
+"PO-Revision-Date: 2016-10-18 10:53+0200\n"
+"Last-Translator: David Persson <davidpersson@gmx.de>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
 
-#: config/panes.php:19 config/widgets.php:22
+#: config/panes.php:26 config/widgets.php:29
 msgid "Projects"
-msgstr ""
+msgstr "Projekte"
 
-#: views/projects/admin_form.html.php:7
+#: models/Projects.php:93
+msgid "Tags cannot contain spaces."
+msgstr "Innerhalb von Tags können keine Leerzeichen genutzt werden."
+
+#: views/projects/admin_form.html.php:13
 msgid "untitled"
-msgstr ""
+msgstr "Ohne Titel"
 
-#: views/projects/admin_form.html.php:8
+#: views/projects/admin_form.html.php:14 views/projects/admin_index.html.php:19
 msgid "project"
-msgstr ""
+msgstr "Projekt"
 
-#: views/projects/admin_form.html.php:11
+#: views/projects/admin_form.html.php:17
 msgid "published"
-msgstr ""
+msgstr "publiziert"
 
-#: views/projects/admin_form.html.php:11
+#: views/projects/admin_form.html.php:17
 msgid "unpublished"
-msgstr ""
+msgstr "unpubliziert"
 
-#: views/projects/admin_form.html.php:12
+#: views/projects/admin_form.html.php:18
 msgid "promoted"
-msgstr ""
+msgstr "promotet"
 
-#: views/projects/admin_form.html.php:12
+#: views/projects/admin_form.html.php:18
 msgid "unpromoted"
-msgstr ""
+msgstr "unpromotet"
 
-#: views/projects/admin_form.html.php:22
-#: views/projects/admin_index.html.php:24
+#: views/projects/admin_form.html.php:27 views/projects/admin_index.html.php:29
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
-#: views/projects/admin_form.html.php:25
+#: views/projects/admin_form.html.php:30
 msgid "Release Date"
-msgstr ""
+msgstr "Veröffentlichungsdatum"
 
-#: views/projects/admin_form.html.php:26
+#: views/projects/admin_form.html.php:31
 msgid "Allows you to specify when the project was officially released."
-msgstr ""
-
-#: views/projects/admin_form.html.php:27
-msgid "Client"
-msgstr ""
-
-#: views/projects/admin_form.html.php:32
-msgid "Links"
-msgstr ""
+msgstr "Erlaubt das Veröffentlichungsdatum des Projektes festzulegen."
 
 #: views/projects/admin_form.html.php:34
-msgid ""
-"Specify Links as URLs with leading protocol (i.e. `http://example.com`)."
-msgstr ""
+msgid "Tags"
+msgstr "Tags"
 
-#: views/projects/admin_form.html.php:35
-msgid ""
-"Separate multiple links with newlines so that each one has its own line."
-msgstr ""
+#: views/projects/admin_form.html.php:38
+msgid "Client"
+msgstr "Kunde"
 
-#: views/projects/admin_form.html.php:44
+#: views/projects/admin_form.html.php:39
+msgid "Link"
+msgstr "Link"
+
+#: views/projects/admin_form.html.php:41
+msgid "Specify Link as URL with leading protocol (i.e. `http://example.com`)."
+msgstr "Links müssen mit führenden Protokoll angegeben werden (z.B. `http://example.de`)."
+
+#: views/projects/admin_form.html.php:50
+msgid "Tasks"
+msgstr "Aufgaben"
+
+#: views/projects/admin_form.html.php:55
+msgid "Tasks for the project (i.e. `art direction`), one per line."
+msgstr "Aufgaben für das Projekt (z.B. `Art Direktion`), eine Aufgabe pro Zeile."
+
+#: views/projects/admin_form.html.php:62
 msgid "Cover"
-msgstr ""
+msgstr "Cover"
 
-#: views/projects/admin_form.html.php:47 views/projects/admin_form.html.php:58
-msgid "select"
-msgstr ""
-
-#: views/projects/admin_form.html.php:52
+#: views/projects/admin_form.html.php:69
 msgid "Media"
-msgstr ""
+msgstr "Medien"
 
-#: views/projects/admin_form.html.php:66
-msgid "Short Description"
-msgstr ""
-
-#: views/projects/admin_form.html.php:77
-msgid "Long Description"
-msgstr ""
-
-#: views/projects/admin_form.html.php:85
-#: views/projects/admin_index.html.php:45
-msgid "publish"
-msgstr ""
-
-#: views/projects/admin_form.html.php:85
-#: views/projects/admin_index.html.php:45
-msgid "unpublish"
-msgstr ""
-
-#: views/projects/admin_form.html.php:86
-#: views/projects/admin_index.html.php:44
-msgid "promote"
-msgstr ""
-
-#: views/projects/admin_form.html.php:86
-#: views/projects/admin_index.html.php:44
-msgid "unpromote"
-msgstr ""
+#: views/projects/admin_form.html.php:78
+msgid "Teaser"
+msgstr "Anreißer"
 
 #: views/projects/admin_form.html.php:88
-msgid "save"
-msgstr ""
+msgid "Content"
+msgstr "Inhalt"
 
-#: views/projects/admin_index.html.php:6
-msgid "projects"
-msgstr ""
-
-#: views/projects/admin_index.html.php:14
-msgid "new project"
-msgstr ""
-
-#: views/projects/admin_index.html.php:21
-msgid "publ.?"
-msgstr ""
-
-#: views/projects/admin_index.html.php:22
-msgid "prom.?"
-msgstr ""
-
-#: views/projects/admin_index.html.php:25
-msgid "Created"
-msgstr ""
-
-#: views/projects/admin_index.html.php:43
+#: views/projects/admin_form.html.php:97
 msgid "delete"
-msgstr ""
+msgstr "löschen"
 
-#: views/projects/admin_index.html.php:46
+#: views/projects/admin_form.html.php:104
+#: views/projects/admin_index.html.php:49
+msgid "publish"
+msgstr "publizieren"
+
+#: views/projects/admin_form.html.php:104
+#: views/projects/admin_index.html.php:49
+msgid "unpublish"
+msgstr "depublizieren"
+
+#: views/projects/admin_form.html.php:105
+#: views/projects/admin_index.html.php:48
+msgid "promote"
+msgstr "promoten"
+
+#: views/projects/admin_form.html.php:105
+#: views/projects/admin_index.html.php:48
+msgid "unpromote"
+msgstr "depromoten"
+
+#: views/projects/admin_form.html.php:107
+msgid "save"
+msgstr "speichern"
+
+#: views/projects/admin_index.html.php:12
+msgid "projects"
+msgstr "Projekte"
+
+#: views/projects/admin_index.html.php:26
+msgid "publ.?"
+msgstr "publ.?"
+
+#: views/projects/admin_index.html.php:27
+msgid "prom.?"
+msgstr "prom.?"
+
+#: views/projects/admin_index.html.php:30
+msgid "Modified"
+msgstr "Bearbeitet"
+
+#: views/projects/admin_index.html.php:50
 msgid "open"
-msgstr ""
+msgstr "öffnen"
 
-#: views/projects/admin_index.html.php:51
+#: views/projects/admin_index.html.php:55
 msgid "No items available, yet."
-msgstr ""
+msgstr "Noch keine Daten verfügbar."
