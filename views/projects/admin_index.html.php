@@ -37,7 +37,7 @@ $this->set([
 					<td class="flag"><i class="material-icons"><?= ($item->is_promoted ? 'done' : '') ?></i>
 					<td class="media">
 						<?php if (($media = $item->cover()) && ($version = $media->version('fix3admin'))): ?>
-							<?= $this->media->image($version->url('http')) ?>
+							<?= $this->media->image($version) ?>
 						<?php endif ?>
 					<td class="title emphasize"><?= $item->title ?>
 					<td class="date modified">
