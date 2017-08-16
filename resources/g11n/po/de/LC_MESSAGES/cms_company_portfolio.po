@@ -28,7 +28,7 @@ msgstr "Innerhalb von Tags können keine Leerzeichen genutzt werden."
 
 #: views/projects/admin_form.html.php:13
 msgid "untitled"
-msgstr "Ohne Titel"
+msgstr "ohne Titel"
 
 #: views/projects/admin_form.html.php:14 views/projects/admin_index.html.php:19
 msgid "project"
