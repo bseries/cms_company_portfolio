@@ -1,32 +1,19 @@
 {
-    "name": "atelierdisko/cms_company_portfolio",
+    "name": "bseries/cms_company_portfolio",
     "description": "Company portfolio functionality for Bureau.",
-    "homepage": "https://atelierdisko.de",
     "type": "lithium-library",
-    "license": "proprietary",
-    "authors": [
-      {
-        "name": "Atelier Disko",
-        "homepage": "https://atelierdisko.de"
-      }
-    ],
+    "license": ["BSD-3-Clause"],
     "require": {
         "php": "^5.5 || ^7.0",
-        "atelierdisko/base_core": "1.5.*@dev",
-        "atelierdisko/base_media": "1.5.*@dev",
-        "atelierdisko/base_tag": "1.5.*@dev",
-        "atelierdisko/cms_core": "1.5.*@dev",
+        "bseries/base_core": "1.5.*@dev",
+        "bseries/base_media": "1.5.*@dev",
+        "bseries/base_tag": "1.5.*@dev",
+        "bseries/cms_core": "1.5.*@dev",
         "atelierdisko/li3_taggable": "^1.4@stable || 1.5.*@dev",
         "unionofrad/lithium": "^1.1",
         "composer/installers": "1.*@stable"
     },
     "conflict": {
-        "atelierdisko/cms_artist_portfolio": "*"
-    },
-    "repositories": [
-      { "type": "vcs", "url": "git@code.disko.io:base_core" },
-      { "type": "vcs", "url": "git@code.disko.io:base_media" },
-      { "type": "vcs", "url": "git@code.disko.io:base_tag" },
-      { "type": "vcs", "url": "git@code.disko.io:cms_core" }
-    ]
+        "bseries/cms_artist_portfolio": "*"
+    }
 }
