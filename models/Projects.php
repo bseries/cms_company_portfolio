@@ -75,7 +75,7 @@ class Projects extends \base_core\models\Base {
 			[
 				'notEmpty',
 				'on' => ['create', 'update'],
-				'message' => 'Dieses Feld darf nicht leer sein.'
+				'message' => $t('This field cannot be empty.', ['scope' => 'cms_company_portfolio'])
 			]
 		];
 		$model->validates['tags'] = [
