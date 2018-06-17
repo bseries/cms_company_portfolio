@@ -18,4 +18,4 @@ CREATE TABLE `portfolio_projects` (
   KEY `is_published` (`is_published`),
   KEY `is_promoted` (`is_promoted`),
   KEY `order` (`order`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
