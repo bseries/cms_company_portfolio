@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cms_company_portfolio 1.0\n"
 "Report-Msgid-Bugs-To: info@atelierdisko.de\n"
-"POT-Creation-Date: 2016-10-18 10:50+0200\n"
+"POT-Creation-Date: 2018-07-12 12:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: config/panes.php:26 config/widgets.php:29
+#: config/panes.php:18 config/widgets.php:21
 msgid "Projects"
 msgstr ""
 
-#: models/Projects.php:93
+#: models/Projects.php:78
+msgid "This field cannot be empty."
+msgstr ""
+
+#: models/Projects.php:85
 msgid "Tags cannot contain spaces."
 msgstr ""
 
